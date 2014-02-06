@@ -8,6 +8,7 @@ alias less='less -eX'
 alias hh='history 20'
 
 # Application aliases
+alias emacs='emacs -q'
 alias e='open -a Emacs'
 alias nb='~/src/nb/nb'
 alias skim='open -a Skim.app'
