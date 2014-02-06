@@ -13,7 +13,7 @@
  '(ess-swv-processor (quote knitr))
  '(inhibit-startup-screen t)
  '(show-paren-mode t)
- '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
+ '(text-mode-hook (quote (text-mode-hook-identify)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -21,4 +21,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "gray20" :foreground "white smoke" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "apple" :family "Monaco"))))
- '(hl-line ((t (:inherit highlight :background "grey28"))) t))
+ '(hl-line ((t (:inherit highlight :background "grey28")))))
