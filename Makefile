@@ -20,3 +20,14 @@ all:
 	cp dotgitconfig ~/.gitconfig
 	cp dotlatexmkrc ~/.latexmkrc
 	cp dotnbrc ~/.nbrc
+
+update:
+	cp ~/.emacs dotemacs 
+	cp ~/.emacs-gnu.el dotemacs-gnu.el 
+	cp ~/.emacs.d/custom.el custom.el 
+	cp ~/.emacs.d/org-cgr.el org-cgr.el 
+	cp ~/.profile dotprofile 
+	cp ~/.Rprofile dotRprofile  
+	cp ~/.gitconfig dotgitconfig 
+	cp ~/.latexmkrc dotlatexmkrc 
+	cp ~/.nbrc dotnbrc 
