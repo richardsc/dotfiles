@@ -6,6 +6,11 @@
 (global-hl-line-mode 1)
 (global-visual-line-mode 1)
 
+;; ======================================================================
+;; Org mode
+;; ======================================================================
+(load-file "~/.emacs.d/org-cgr.el")
+
 ;; Mac specific stuff
 (setq mac-command-modifier 'meta)
 (setq x-select-enable-clipboard t)
