@@ -6,7 +6,7 @@ all:
 	cp ~/.emacs.d/org-cgr.el ~/.emacs.d/org-cgr.el.bak
 	cp ~/.profile ~/.profile.bak
 	cp ~/.Rprofile ~/.Rprofile.bak
-	cp ~/.gitconfig ~/.gitconfig.back
+	cp ~/.gitconfig ~/.gitconfig.bak
 	cp ~/.latexmkrc ~/.latexmkrc.bak
 	cp ~/.nbrc ~/.nbrc.bak
 
