@@ -15,7 +15,6 @@ alias skim='open -a Skim.app'
 alias acroread='open -a Adobe\ Reader.app'
 alias dirs='dirs -v'
 alias ae='aquamacs'
-#alias aen='/Applications/Aquamacs\ Emacs.app/Contents/MacOS/Aquamacs\ Emacs -nw'
 alias aenw='/Applications/Aquamacs.app/Contents/MacOS/Aquamacs -nw'
 #alias matlab='xterm -bg navy -fg snow -T matlab -e /Applications/MATLAB_R2008a/bin/matlab -nodesktop -nosplash&'
 #alias matlab='xterm -bg navy -fg snow -T matlab -e /Applications/MATLAB_R2010a.app/bin/matlab -nodesktop -nosplash&'
@@ -23,7 +22,6 @@ alias mt='mterm -x /usr/bin/matlab -nodesktop -nosplash'
 alias ml='/usr/bin/matlab -nodesktop -nosplash'
 alias r='open -a R.app'
 #alias rt='xterm -bg LightSlateGray -fg snow -T R -e /usr/bin/R &'
-#alias rt='rterm -x -p 770,390 R'
 alias rt='rterm -x R'
 alias td='python ~/bin/t/t.py --task-dir ~/Dropbox --list todo'
 alias t='python ~/bin/t/t.py --task-dir . --list tasks'
@@ -32,24 +30,7 @@ alias readme='displayreadme'
 alias netmon='lsof -P -i -n | cut -f 1 -d " " | uniq'
 
 # Directory aliases
-#alias go='cd ~/research/sleiwex/src/matlab/misc/generation_model/'
-#alias go='cd ~/presentations/cdogs2010/'
-#alias go=' cd ~/school/committee_meetings/2010-07-19/'
-#alias go='cd ~/school/thesis/work/adv-turb/src/adv-progvec/'
-alias go='cd ~/presentations/cargese2010/poster/'
-alias shad='cd ~/misc/shad/shad2010/'
-alias stream='cd ~/research/sleiwex/src/matlab/misc/streamfunction/'
-alias prop='cd ~/school/proposal/'
-alias bib='cd ~/Library/texmf/bibtex/bib/'
-alias sl='cd ~/research/sleiwex/'
-alias slar='cd /data/archive/sleiwex/2008/'
-alias stream='cd ~/research/sleiwex/src/matlab/misc/streamfunction/'
-alias agu='cd ~/presentations/agu_2010/poster/'
-alias cdogs='cd ~/misc/cdogs/'
-alias th='cd ~/school/thesis/'
-#alias go='cd ~/presentations/cmos2010/poster/'
-alias oce='cd ~/src/R-kelley/oce/'
-alias ib='cd ~/papers/internal-beach/'
+# Don't need these because now I use bashmarks
 
 # Hibernate mode
 alias hibernateon="sudo pmset -a hibernatemode 5"
@@ -90,13 +71,9 @@ export MKL_NUM_THREADS
 # Add task count (for tasks in current directory)
 function count_tasks {
     ~/bin/t/t.py | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/(/' | sed -e 's/$/t)/' | sed -e 's/(t)//'
-     #~/bin/t/t.py | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/</' | sed -e 's/$/>/' | sed -e 's/<>//'
-     #~/bin/t/t.py | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/[/' | sed -e 's/$/]/' | sed -e 's/\[\]//'
 }
 function count_todo {
-    #cat ~/Dropbox/todo | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/(/' | sed -e 's/$/td)/' | sed -e 's/(td)//'
     cat ~/Dropbox/todo | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/|/' | sed -e 's/$/td|/' | sed -e 's/|td|//'
-     #~/bin/t/t.py | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/[/' | sed -e 's/$/]/' | sed -e 's/\[\]//'
 }
 
 # function to detect if a README* file is present in current directory
@@ -121,19 +98,6 @@ export PS1="$PS1$ "
 
 #Bashmarks
 source ~/bin/bashmarks.sh
-##
-# Your previous /Users/richardsc/.profile file was backed up as /Users/richardsc/.profile.macports-saved_2011-04-19_at_23:52:48
-##
-
-# MacPorts Installer addition on 2011-04-19_at_23:52:48: adding an appropriate PATH variable for use with MacPorts.
-# export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .profile.pysave
-# PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-# export PATH
 
 # Setting PATH for EPD-7.3-2
 # The orginal version is saved in .profile.pysave
