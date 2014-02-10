@@ -18,3 +18,13 @@
 		  "VERIFY(v@)" "SOMEDAY(s@/@)" "HOLD(h@/@)" "LOG(l@/@)" "|" 
 		  "DONE(d@/@)" "DELEGATED(D@/@)" "CANCELED(c@/@)"
 		  "NOTDONE(n@/@)" "LOGGED(L@/@)")))
+
+;; Org babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((sh . t)
+   (python . t)
+   (emacs-lisp . t)   
+   (octave . t)
+   (R . t)
+   ))
