@@ -1,4 +1,6 @@
 ;; Org mode configurations
+(require 'org-install)
+(require 'ob-tangle)
 
 ;; keybindings
 (global-set-key "\C-cl" 'org-store-link)
@@ -28,3 +30,7 @@
    (octave . t)
    (R . t)
    ))
+(setq org-confirm-babel-evaluate nil) ;; don't ask to eval code
+(setq org-src-fontify-natively t)
+(setq org-export-babel-evaluate nil)
+(set-face-attribute 'org-block-background nil :background "black")
