@@ -101,5 +101,9 @@ source ~/bin/bashmarks.sh
 
 # Setting PATH for EPD-7.3-2
 # The orginal version is saved in .profile.pysave
-PATH="/Library/Frameworks/EPD64.framework/Versions/Current/bin:${PATH}"
-export PATH
+# PATH="/Library/Frameworks/EPD64.framework/Versions/Current/bin:${PATH}"
+# export PATH
+
+# Added by Canopy installer on 2014-02-12
+# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
+VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/richardsc/Library/Enthought/Canopy_64bit/User/bin/activate
