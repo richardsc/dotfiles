@@ -5,6 +5,11 @@
 (server-start)
 (global-hl-line-mode 1)
 (global-visual-line-mode 1)
+(defun visual-line-line-range ()
+  (save-excursion
+    (cons (progn (vertical-motion 0) (point))
+	  (progn (vertical-motion 1) (point)))))
+(set (make-local-variable 'hl-line-range-function) #'visual-line-line-range)
 
 ;; ======================================================================
 ;; Org mode
