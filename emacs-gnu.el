@@ -9,7 +9,7 @@
   (save-excursion
     (cons (progn (vertical-motion 0) (point))
 	  (progn (vertical-motion 1) (point)))))
-(set (make-local-variable 'hl-line-range-function) #'visual-line-line-range)
+(setq hl-line-range-function 'visual-line-line-range)
 
 ;; ======================================================================
 ;; Org mode
