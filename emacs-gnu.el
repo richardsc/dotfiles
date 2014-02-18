@@ -42,7 +42,7 @@
 ;; Latex stuff
 ;; ======================================================================
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
-;(add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
+(add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
 		'("All" "latexmk -pdf %t" TeX-run-TeX nil 
