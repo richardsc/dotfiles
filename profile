@@ -10,6 +10,7 @@ alias hh='history 20'
 # Application aliases
 alias emacs='emacs -q'
 alias e='open -a Emacs'
+alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n'
 alias nb='~/src/nb/nb'
 alias skim='open -a Skim.app'
 alias acroread='open -a Adobe\ Reader.app'
