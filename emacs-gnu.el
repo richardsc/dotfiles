@@ -25,12 +25,12 @@
 ;; ======================================================================
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 (global-set-key (kbd "C-c j") 'flyspell-check-previous-highlighted-word)
-(add-hook 'markdown-mode-hook 'flyspell-mode)
 
 ;; ======================================================================
 ;; Markdown mode
 ;; ======================================================================
 (setq markdown-enable-math t)
+(add-hook 'markdown-mode-hook 'flyspell-mode)
 
 ;; ======================================================================
 ;; Window width and height

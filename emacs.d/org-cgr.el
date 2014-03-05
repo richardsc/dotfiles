@@ -2,6 +2,9 @@
 (require 'org-install)
 (require 'ob-tangle)
 
+;; Flyspell mode
+(add-hook 'org-mode-hook 'flyspell-mode)
+
 ;; keybindings
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
