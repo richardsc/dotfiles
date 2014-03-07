@@ -11,6 +11,7 @@
 	  (progn (vertical-motion 1) (point)))))
 (setq hl-line-range-function 'visual-line-line-range)
 
+;; custom unwrap function from: http://sdpconfig.wordpress.com/2011/09/26/writing-a-function-to-unwrap-text-in-emacs/
 (defun unfill-region-or-buffer ()
   "Unwrap hard-wrapped text in buffer or region."
   (interactive)
