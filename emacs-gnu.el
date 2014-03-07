@@ -11,6 +11,16 @@
 	  (progn (vertical-motion 1) (point)))))
 (setq hl-line-range-function 'visual-line-line-range)
 
+(defun unfill-region-or-buffer ()
+  "Unwrap hard-wrapped text in buffer or region."
+  (interactive)
+  (let ((fill-column most-positive-fixnum))
+    (if (region-active-p)
+        (fill-region (region-beginning) (region-end))
+      (fill-region (point-min) (point-max)))))
+(global-set-key [(control c)(f)] 'fill-region)
+(global-set-key [(control c)(F)] 'unfill-region-or-buffer)
+
 ;; ======================================================================
 ;; Org mode
 ;; ======================================================================
