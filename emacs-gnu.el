@@ -131,3 +131,10 @@
 (add-hook 'LaTeX-mode-hook 'ac-latex-mode-setup)
 (global-auto-complete-mode t)
 (ac-flyspell-workaround)
+
+;; =================================================
+;; lorem-ipsum
+;; =================================================
+(autoload 'Lorem-ipsum-insert-paragraphs "lorem-ipsum" "" t)
+(autoload 'Lorem-ipsum-insert-sentences "lorem-ipsum" "" t)
+(autoload 'Lorem-ipsum-insert-list "lorem-ipsum" "" t)
