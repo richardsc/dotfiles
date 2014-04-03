@@ -12,7 +12,7 @@
 (setq hl-line-range-function 'visual-line-line-range)
 
 ;; linum-mode
-(global-linum-mode 1)
+;; (global-linum-mode 1)
 
 ;; custom unwrap function from: http://sdpconfig.wordpress.com/2011/09/26/writing-a-function-to-unwrap-text-in-emacs/
 (defun unfill-region-or-buffer ()
