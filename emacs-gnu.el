@@ -58,6 +58,7 @@
 ;; ======================================================================
 ;; Latex stuff
 ;; ======================================================================
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
 (eval-after-load "tex"
