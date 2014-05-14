@@ -11,6 +11,7 @@
  '(bm-repository-file "/Users/richardsc/Dropbox/emacs/bm-repository")
  '(column-number-mode t)
  '(custom-enabled-themes (quote (tsdh-dark)))
+ '(custom-safe-themes (quote ("cd70962b469931807533f5ab78293e901253f5eeb133a46c2965359f23bfb2ea" default)))
  '(ess-R-font-lock-keywords (quote ((ess-R-fl-keyword:modifiers . t) (ess-R-fl-keyword:fun-defs . t) (ess-R-fl-keyword:keywords . t) (ess-R-fl-keyword:assign-ops . t) (ess-R-fl-keyword:constants . t) (ess-fl-keyword:fun-calls . t) (ess-fl-keyword:numbers) (ess-fl-keyword:operators) (ess-fl-keyword:delimiters . t) (ess-fl-keyword:= . t) (ess-R-fl-keyword:F&T))))
  '(ess-swv-processor (quote knitr))
  '(inhibit-startup-screen t)
