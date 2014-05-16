@@ -58,15 +58,27 @@
 ;; ======================================================================
 ;; Latex stuff
 ;; ======================================================================
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
+(setq TeX-PDF-mode t)
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
 		'("All" "latexmk -pdf %t" TeX-run-TeX nil 
 		    (latex-mode doctex-mode)
 		      :help "Run latexmk")))
+
+;; use Skim as default pdf viewer
+;; Skim's displayline is used for forward search (from .tex to .pdf)
+;; option -b highlights the current line; option -g opens Skim in the background  
+(setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
+(setq TeX-view-program-list
+     '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
 
 ;;Latex beamer new frame macro: FIXME doesn't work with GNU emacs
 (fset 'beamer-insert-frame
