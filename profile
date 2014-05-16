@@ -27,11 +27,9 @@ alias t='python ~/bin/t/t.py --task-dir . --list tasks'
 alias inkscape='/Applications/Inkscape.app/Contents/Resources/bin/inkscape'
 alias readme='displayreadme'
 alias netmon='lsof -P -i -n | cut -f 1 -d " " | uniq'
+alias boce='g oce; git pl; cd ..; make oce'
 
-# Directory aliases
-# Don't need these because now I use bashmarks
-
-# Hibernate mode
+# Hibernate mode; doesn't seem to work in 10.8
 alias hibernateon="sudo pmset -a hibernatemode 5"
 alias hibernateoff="sudo pmset -a hibernatemode 0"
 
