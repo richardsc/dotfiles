@@ -30,7 +30,7 @@ alias netmon='lsof -P -i -n | cut -f 1 -d " " | uniq'
 alias boce='g oce; git pl; cd ..; make oce'
 
 # Hibernate mode; doesn't seem to work in 10.8
-alias hibernateon="sudo pmset -a hibernatemode 5"
+alias hibernateon="sudo pmset -a hibernatemode 1"
 alias hibernateoff="sudo pmset -a hibernatemode 0"
 
 # Setting PATH for MacPython 2.6
