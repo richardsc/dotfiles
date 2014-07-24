@@ -43,8 +43,8 @@ alias hibernateoff="sudo pmset -a hibernatemode 0"
 # PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
 # export PATH
 
-# Set path for Git after Snow-leopard upgrade
-export PATH=${PATH}:/usr/local/git/bin
+# Set path for Git to use latest version
+export PATH=/usr/local/git/bin:${PATH}
 ##
 # Your previous /Users/richardsc/.profile file was backed up as /Users/richardsc/.profile.macports-saved_2010-02-02_at_14:29:55
 ##
