@@ -1,5 +1,6 @@
 export PATH=${PATH}:~/bin
 export PATH=${PATH}:/usr/local/share/sage
+export PATH=${PATH}:/Library/Frameworks/PROJ.framework/Programs
 export EDITOR=/usr/bin/emacs
 
 alias ls='ls -GF'
@@ -21,7 +22,7 @@ alias mt='mterm -x /usr/bin/matlab -nodesktop -nosplash'
 alias ml='/usr/bin/matlab -nodesktop -nosplash'
 alias r='open -a R.app'
 #alias rt='xterm -bg LightSlateGray -fg snow -T R -e /usr/bin/R &'
-alias rt='rterm -x R'
+alias rt='rterm -x /usr/bin/R'
 alias td='python ~/bin/t/t.py --task-dir ~/Dropbox --list todo'
 alias t='python ~/bin/t/t.py --task-dir . --list tasks'
 alias inkscape='/Applications/Inkscape.app/Contents/Resources/bin/inkscape'
