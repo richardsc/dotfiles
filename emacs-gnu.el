@@ -22,7 +22,6 @@
                     :foreground "Black"
                     :background "DarkOrange"
                     :box nil)
-
 ;; Included separators: alternate, arrow, arrow-fade, bar, box, brace, butt,
 ;; chamfer, contour, curve, rounded, roundstub, slant, wave, zigzag, and nil.
 (setq powerline-default-separator 'slant)
