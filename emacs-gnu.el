@@ -14,6 +14,20 @@
 ;; linum-mode
 ;; (global-linum-mode 1)
 
+;; Powerline
+;; https://emacs.stackexchange.com/questions/281/how-do-i-get-a-fancier-looking-mode-line
+(add-to-list 'load-path "~/.emacs.d/elpa/powerline-20141117.634")
+(require 'powerline)
+(set-face-attribute 'mode-line nil
+                    :foreground "Black"
+                    :background "DarkOrange"
+                    :box nil)
+
+;; Included separators: alternate, arrow, arrow-fade, bar, box, brace, butt,
+;; chamfer, contour, curve, rounded, roundstub, slant, wave, zigzag, and nil.
+(setq powerline-default-separator 'slant)
+(powerline-center-theme)
+
 ;; custom unwrap function from: http://sdpconfig.wordpress.com/2011/09/26/writing-a-function-to-unwrap-text-in-emacs/
 (defun unfill-region-or-buffer ()
   "Unwrap hard-wrapped text in buffer or region."
