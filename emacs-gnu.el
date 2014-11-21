@@ -112,11 +112,18 @@
 ;; =================================================
 ;; Polymode -- for editing Rmarkdown files
 ;; =================================================
-(setq load-path
-      (append '("~/git/polymode/"  "~/git/polymode/modes")
-              load-path))
+;; (setq load-path
+;;       (append '("~/git/polymode/"  "~/git/polymode/modes")
+;;               load-path))
 (require 'poly-R)
 (require 'poly-markdown)
+;;; MARKDOWN
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+
+;;; R modes
+(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
 ;; =================================================
 ;; ESS
