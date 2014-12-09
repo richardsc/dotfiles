@@ -29,6 +29,7 @@ alias inkscape='/Applications/Inkscape.app/Contents/Resources/bin/inkscape'
 alias readme='displayreadme'
 alias netmon='lsof -P -i -n | cut -f 1 -d " " | uniq'
 alias boce='g oce; git pl; cd ..; make oce'
+alias octave='/usr/local/octave/3.8.0/bin/octave'
 
 # Hibernate mode; doesn't seem to work in 10.8
 alias hibernateon="sudo pmset -a hibernatemode 1"
