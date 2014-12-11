@@ -69,7 +69,7 @@ export MKL_NUM_THREADS
 
 # Add task count (for tasks in current directory)
 function count_tasks {
-    ~/bin/t/t.py | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/(/' | sed -e 's/$/t)/' | sed -e 's/(t)//'
+    ~/bin/t.py | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/(/' | sed -e 's/$/t)/' | sed -e 's/(t)//'
 }
 function count_todo {
     cat ~/Dropbox/todo | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/|/' | sed -e 's/$/td|/' | sed -e 's/|td|//'
