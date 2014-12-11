@@ -1,0 +1,1 @@
+update makesymlinks.sh so that when backing up only real files i.e. not symlinks -- get backed up | id:32af8845b0af21cd203f96d3dcf3f3a0199f52f2
