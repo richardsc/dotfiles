@@ -16,7 +16,7 @@
 
 ;; Powerline
 ;; https://emacs.stackexchange.com/questions/281/how-do-i-get-a-fancier-looking-mode-line
-(add-to-list 'load-path "~/.emacs.d/elpa/powerline-20141117.634")
+(add-to-list 'load-path "~/.emacs.d/elpa/powerline-20141125.726")
 (require 'powerline)
 (set-face-attribute 'mode-line nil
                     :foreground "Black"
