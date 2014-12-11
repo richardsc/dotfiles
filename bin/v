@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+# Copies to a backup file, e.g. "a" is copied to "a-2006-07-13T08:41"
+require POSIX;#::strftime;
+die "Usage: v filename\n" if $#ARGV != 0;
+$file = $ARGV[0];
+($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
+$mon = $mon + 1; # starts at zero
+$time = POSIX::strftime('%Y-%m-%dT%H:%M',localtime());
+$backup = "$file-$time";
+$cmd = "cp $file $backup";
+print "DOING      $cmd      ...";
+system("$cmd");
+print " done\n";
+

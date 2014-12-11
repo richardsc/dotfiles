@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Ideas:
+# * check existing daily sync folder so filenames aren't clobbered -- 
+
+SYNCDIR=~/Dropbox/ipadsync/
+file=$1
+
+# enough arguments?
+if [ $# -ne 1 ]; then
+    echo 1>&2 Usage: ipadsync file.ext
+    exit 127
+fi
+
+# create daily directory
+dailydir=`date +"%Y-%m-%d"`
+outdir=$SYNCDIR$dailydir
+echo $outdir
+if [ ! -d "$outdir" ]
+then
+    mkdir $outdir
+fi
+# 
+
+# if the file is a pdf, just copy to the sync folder
+# if the file is a png or jpg, convert to pdf and copy to sync folder
+if [ ${file: -4} == ".pdf" ]
+then
+    echo "Copying $file to $outdir"
+    cp $file $outdir
+elif [ ${file: -4} == ".png" ]
+then
+    outfile="${file%.*}.pdf"
+    echo "Converting $file to $outfile and copying to $outdir"
+    convert $file $outfile
+    cp $outfile $outdir
+    rm $outfile
+else 
+    echo "Unrecognized file type"
+fi
+
+
+

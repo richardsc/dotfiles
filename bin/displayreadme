@@ -1,0 +1,14 @@
+#!/bin/bash
+
+test=`ls | grep README | wc -l`
+if [ $test -gt 0 ]; then
+    if [ `ls | grep README.md | wc -l` -gt 0 ]; then
+	less README.md
+    elif [ `ls | grep README.rst | wc -l` -gt 0 ]; then
+	less README.rst
+    elif [ `ls | grep README.txt | wc -l` -gt 0 ]; then
+	less README.txt
+    else
+	less README*
+    fi
+fi

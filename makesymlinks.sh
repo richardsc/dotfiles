@@ -29,3 +29,21 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# lets add a few specific symlinks for non-dotfiles in ~/bin
+bindir=~/git/dotfiles/bin
+binolddir=~/bin/bin_old
+binfiles="bashmarks.sh displayreadme ipadsync markdown mterm rterm tree v t.py"
+
+# create bin_old in ~/bin
+echo "Creating $binolddir for backup of any existing bin files in ~/bin"
+mkdir -p $binolddir
+echo "...done"
+
+# move any existing bin files in bin to bin_old directory, then create symlinks 
+for file in $binfiles; do
+    echo "Moving any existing binfiles from ~/bin to $binolddir"
+    mv ~/bin/$file ~/bin/bin_old/
+    echo "Creating symlink to $file in ~/bin directory."
+    ln -s $bindir/$file ~/bin/$file
+done
