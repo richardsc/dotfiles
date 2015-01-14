@@ -33,7 +33,7 @@ done
 # lets add a few specific symlinks for non-dotfiles in ~/bin
 bindir=~/git/dotfiles/bin
 binolddir=~/bin/bin_old
-binfiles="bashmarks.sh displayreadme ipadsync markdown mterm rterm tree v t.py matlabcmd octave"
+binfiles="bashmarks.sh displayreadme ipadsync markdown mterm rterm tree v t.py matlabcmd octave histmatch"
 
 # create bin_old in ~/bin
 echo "Creating $binolddir for backup of any existing bin files in ~/bin"
