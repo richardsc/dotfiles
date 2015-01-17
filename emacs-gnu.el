@@ -3,6 +3,18 @@
 (load custom-file 'noerror)
 
 (server-start)
+
+;; =================================================
+;; Melpa
+;; =================================================
+(require 'package)
+(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
+			 ("gnu" . "http://elpa.gnu.org/packages/")))
+;; (add-to-list 'package-archives
+;;              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
+;; Highlight and visual line mode
 (global-hl-line-mode 1)
 (global-visual-line-mode 1)
 (defun visual-line-line-range ()
@@ -98,16 +110,6 @@
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([92 98 101 103 105 110 123 102 114 97 109 101 125 123 125 return return return return 92 101 110 100 123 102 114 97 109 101 125 16 16] 0 "%d")) arg)))
 (global-set-key (kbd "C-x C-k f") 'beamer-new-frame)
 (put 'narrow-to-region 'disabled nil)
-
-;; =================================================
-;; Melpa
-;; =================================================
-(require 'package)
-(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
-			 ("gnu" . "http://elpa.gnu.org/packages/")))
-;; (add-to-list 'package-archives
-;;              '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
 
 ;; =================================================
 ;; Polymode -- for editing Rmarkdown files
