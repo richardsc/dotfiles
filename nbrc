@@ -1,1 +1,8 @@
-pretty = "oneline"
+db = "~/Dropbox/nb.db"
+pretty = "oneline" # comment
+showID = False
+colourize = True
+colours.hash = "31m"   # red
+#colours.hash = "36m"   # darkcyan
+colours.title = "1m"   # bold
+colours.keyword = "4m" # underline
