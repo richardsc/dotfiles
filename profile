@@ -1,7 +1,7 @@
 export PATH=${PATH}:~/bin
 export PATH=${PATH}:/usr/local/share/sage
 export PATH=${PATH}:/Library/Frameworks/PROJ.framework/Programs
-export EDITOR=/usr/bin/emacs
+export EDITOR='/usr/bin/emacs -q'
 
 alias ls='ls -GF'
 alias ll='ls -lGFh'
