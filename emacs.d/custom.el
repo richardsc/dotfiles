@@ -41,6 +41,7 @@
  '(inhibit-startup-screen t)
  '(matlab-auto-fill nil)
  '(matlab-comment-region-s "% ")
+ '(matlab-fill-code nil)
  '(show-paren-mode t)
  '(text-mode-hook (quote (text-mode-hook-identify)))
  '(tool-bar-mode nil))
