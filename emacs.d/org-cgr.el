@@ -37,3 +37,4 @@
 (setq org-src-fontify-natively t)
 (setq org-export-babel-evaluate nil)
 (set-face-attribute 'org-block-background nil :background "black")
+(setq org-image-actual-width 450)
