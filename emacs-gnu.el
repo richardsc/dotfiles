@@ -221,3 +221,26 @@
       (setq ac-sources '(ac-source-octave)))
       (add-hook 'octave-mode-hook
         '(lambda () (ac-octave-mode-setup)))
+
+;; =====================================================
+;; Matlab mode stuff
+;; =====================================================
+(load-library "matlab-load")
+;; Enable CEDET feature support for MATLAB code. (Optional)
+(matlab-cedet-setup)
+(setq auto-mode-alist
+    (cons
+     '("\\.m$" . matlab-mode)
+     auto-mode-alist))
+;; auto-complete for matlab-mode
+(add-hook 'matlab-mode-hook
+	  (lambda ()
+	    (auto-complete-mode 1)
+	    (add-to-list 'ac-sources 'ac-source-dictionary)))
+;; auto-complete for matlab-shell-mode
+(add-hook 'matlab-shell-mode-hook
+	  (lambda ()
+	    (auto-complete-mode t)
+	    (add-to-list 'ac-sources 'ac-source-dictionary)))
+(add-to-list 'ac-modes 'matlab-mode)
+(add-to-list 'ac-modes 'matlab-shell-mode)
