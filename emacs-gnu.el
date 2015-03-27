@@ -28,7 +28,7 @@
 
 ;; Powerline
 ;; https://emacs.stackexchange.com/questions/281/how-do-i-get-a-fancier-looking-mode-line
-(add-to-list 'load-path "~/.emacs.d/elpa/powerline-20141125.726")
+(add-to-list 'load-path "~/.emacs.d/elpa/powerline-20150319.533")
 (require 'powerline)
 (set-face-attribute 'mode-line nil
                     :foreground "Black"
@@ -212,3 +212,12 @@
 (add-hook 'kill-emacs-hook '(lambda nil
                               (bm-buffer-save-all)
                               (bm-repository-save)))
+
+;; =====================================================
+;; Octave mode stuff
+;; =====================================================
+(require 'ac-octave)
+    (defun ac-octave-mode-setup ()
+      (setq ac-sources '(ac-source-octave)))
+      (add-hook 'octave-mode-hook
+        '(lambda () (ac-octave-mode-setup)))
