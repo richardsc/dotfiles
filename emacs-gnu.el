@@ -71,6 +71,7 @@
 ;; ======================================================================
 ;; Flyspell mode
 ;; ======================================================================
+(setq ispell-program-name "/usr/local/bin/aspell")
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 (global-set-key (kbd "C-c j") 'flyspell-check-previous-highlighted-word)
 
