@@ -4,6 +4,13 @@
 
 (server-start)
 
+;; Make R console smaller than 50% high
+(add-to-list 'display-buffer-alist
+             '("^\\*R\\*$"
+               (display-buffer-reuse-window
+                display-buffer-pop-up-window)
+               (window-height . 20)))
+
 ;; =================================================
 ;; Melpa
 ;; =================================================
