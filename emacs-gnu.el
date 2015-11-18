@@ -137,6 +137,12 @@
 (setq TeX-view-program-list
      '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
 
+;;Latex beamer new frame macro: FIXME doesn't work with GNU emacs
+(fset 'beamer-insert-frame
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([92 98 101 103 105 110 123 102 114 97 109 101 125 123 125 return return return return 92 101 110 100 123 102 114 97 109 101 125 16 16] 0 "%d")) arg)))
+(global-set-key (kbd "C-x C-k f") 'beamer-insert-frame)
+(put 'narrow-to-region 'disabled nil)
+
 ;; =================================================
 ;; Polymode -- for editing Rmarkdown files
 ;; =================================================
