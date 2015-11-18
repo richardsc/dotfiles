@@ -4,6 +4,20 @@
 
 (server-start)
 
+;; initial window
+(setq initial-frame-alist
+      '(
+        (width . 102) ; character
+        (height . 52) ; lines
+        ))
+
+;; default/sebsequent window
+(setq default-frame-alist
+      '(
+        (width . 102) ; character
+        (height . 60) ; lines
+        ))
+
 ;; Make R console smaller than 50% high
 (add-to-list 'display-buffer-alist
              '("^\\*R\\*$"
@@ -122,12 +136,6 @@
 (setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
 (setq TeX-view-program-list
      '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
-
-;;Latex beamer new frame macro: FIXME doesn't work with GNU emacs
-(fset 'beamer-insert-frame
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ([92 98 101 103 105 110 123 102 114 97 109 101 125 123 125 return return return return 92 101 110 100 123 102 114 97 109 101 125 16 16] 0 "%d")) arg)))
-(global-set-key (kbd "C-x C-k f") 'beamer-new-frame)
-(put 'narrow-to-region 'disabled nil)
 
 ;; =================================================
 ;; Polymode -- for editing Rmarkdown files
@@ -255,3 +263,15 @@
 	    (add-to-list 'ac-sources 'ac-source-dictionary)))
 (add-to-list 'ac-modes 'matlab-mode)
 (add-to-list 'ac-modes 'matlab-shell-mode)
+
+;; =====================================================
+;; Sublimity
+;; =====================================================
+(require 'sublimity)
+;;(sublimity-global-mode)
+;;(require 'sublimity-scroll)
+;; (setq sublimity-scroll-weight 10
+;;       sublimity-scroll-drift-length 5)
+(require 'sublimity-map)
+(sublimity-map-set-delay nil)
+
