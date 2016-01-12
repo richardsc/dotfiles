@@ -164,6 +164,7 @@
 ;; =================================================
 (require 'ess-site)
 ;;(setq ess-use-auto-complete t)
+(ess-set-style 'RStudio)
 
 ;; =================================================
 ;; IDO mode
