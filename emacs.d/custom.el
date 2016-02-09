@@ -4,18 +4,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(LaTeX-command "latex -synctex=1")
- '(TeX-PDF-mode t t)
+ '(TeX-PDF-mode t)
  '(TeX-view-program-list
    (quote
     (("Preview" "open -a Preview.app %o")
-     ("Skim" "open -a Skim.app %o"))) t)
+     ("Skim" "open -a Skim.app %o"))))
  '(TeX-view-program-selection
    (quote
     (((output-dvi style-pstricks)
       "dvips and gv")
      (output-dvi "xdvi")
      (output-pdf "Skim")
-     (output-html "xdg-open"))) t)
+     (output-html "xdg-open"))))
  '(ansi-color-names-vector
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(bm-repository-file "/Users/richardsc/Dropbox/emacs/bm-repository")
@@ -37,6 +37,7 @@
      (ess-fl-keyword:delimiters . t)
      (ess-fl-keyword:= . t)
      (ess-R-fl-keyword:F&T))))
+ '(ess-swv-pdflatex-commands (quote ("pdflatex" "make" "texi2pdf")))
  '(ess-swv-processor (quote knitr))
  '(inhibit-startup-screen t)
  '(matlab-auto-fill nil)
