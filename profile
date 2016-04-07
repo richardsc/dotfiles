@@ -10,8 +10,9 @@ alias hh='history 20'
 
 # Application aliases
 alias emacs='emacs -q'
-alias e='open -a ~/applications/Emacs'
-alias ec='~/applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n'
+#alias e='open -a /Users/richardsc/applications/Emacs'
+alias e='open -a Emacs'
+alias ec='/Users/richardsc/applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n'
 alias nb='~/src/nb/nb'
 alias nn='nota'
 alias n='PYTHONPATH=~/src/nota python -m nota'
