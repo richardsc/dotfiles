@@ -30,9 +30,10 @@
 ;; =================================================
 (require 'package)
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
+			 ("melpa-stable" . "https://stable.melpa.org/packages/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")))
 ;; (add-to-list 'package-archives
-;;              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
 ;; Highlight and visual line mode
