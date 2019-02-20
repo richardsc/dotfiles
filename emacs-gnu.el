@@ -164,9 +164,11 @@
 ;; ESS
 ;; =================================================
 (require 'ess-site)
+(require 'ess-rutils)
 ;;(setq ess-use-auto-complete t)
 (ess-set-style 'RStudio)
-
+(define-key ess-r-mode-map "_" #'ess-insert-assign)
+(define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
 ;; =================================================
 ;; IDO mode
 ;; =================================================
