@@ -43,6 +43,9 @@
  '(matlab-auto-fill nil)
  '(matlab-comment-region-s "% ")
  '(matlab-fill-code nil)
+ '(package-selected-packages
+   (quote
+    (zenburn-theme undo-tree sublimity powerline polymode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode highlight-current-line ess bm auctex ac-octave ac-math)))
  '(show-paren-mode t)
  '(text-mode-hook (quote (text-mode-hook-identify)))
  '(tool-bar-mode nil))
