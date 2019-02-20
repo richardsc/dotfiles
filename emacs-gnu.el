@@ -84,7 +84,7 @@
 ;; ======================================================================
 ;; Org mode
 ;; ======================================================================
-(load-file "~/.emacs.d/org-cgr.el")
+;;(load-file "~/.emacs.d/org-cgr.el")
 
 ;; Mac specific stuff
 (setq mac-command-modifier 'meta)
