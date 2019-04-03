@@ -111,6 +111,10 @@
 ;; ====================================================
 (add-hook 'markdown-mode-hook 'pandoc-mode)
 
+;; exec-path-from-shell to fix $PATH problems on OSX (including pandoc)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 ;; ======================================================================
 ;; Window width and height
 ;; ======================================================================
