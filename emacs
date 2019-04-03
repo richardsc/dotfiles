@@ -4,3 +4,4 @@
 ;; `~/Library/Preferences/Aquamacs Emacs/`)
 (unless (boundp 'aquamacs-version)
   (load-file "~/.emacs-gnu.el"))
+(put 'narrow-to-page 'disabled nil)
