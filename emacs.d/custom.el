@@ -45,7 +45,7 @@
  '(matlab-fill-code nil)
  '(package-selected-packages
    (quote
-    (company-reftex company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org zenburn-theme undo-tree sublimity powerline polymode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode highlight-current-line ess bm auctex ac-octave ac-math)))
+    (pandoc-mode company-reftex company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org zenburn-theme undo-tree sublimity powerline polymode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode highlight-current-line ess bm auctex ac-octave ac-math)))
  '(show-paren-mode t)
  '(text-mode-hook (quote (text-mode-hook-identify)))
  '(tool-bar-mode nil))
