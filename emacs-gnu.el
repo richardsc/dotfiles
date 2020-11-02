@@ -29,7 +29,7 @@
 ;; Melpa
 ;; =================================================
 (require 'package)
-(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")
+(setq package-archives '(("melpa" . "http://melpa.org/packages/")
 			 ("melpa-stable" . "https://stable.melpa.org/packages/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")))
 ;; (add-to-list 'package-archives
@@ -112,8 +112,8 @@
 (add-hook 'markdown-mode-hook 'pandoc-mode)
 
 ;; exec-path-from-shell to fix $PATH problems on OSX (including pandoc)
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
+;; (when (memq window-system '(mac ns x))
+;;   (exec-path-from-shell-initialize))
 
 ;; ======================================================================
 ;; Window width and height
@@ -233,75 +233,75 @@
 (autoload 'Lorem-ipsum-insert-sentences "lorem-ipsum" "" t)
 (autoload 'Lorem-ipsum-insert-list "lorem-ipsum" "" t)
 
-;; =================================================
-;; Visual bookmarks
-;; =================================================
-(setq bm-restore-repository-on-load t)
-(require 'bm)
-(global-set-key (kbd "C-c M-t") 'bm-toggle)
-(global-set-key (kbd "C-c M-n") 'bm-next)
-(global-set-key (kbd "C-c M-p") 'bm-previous)
-;; make bookmarks persistent as default
-(setq-default bm-buffer-persistence t)
+;; ;; =================================================
+;; ;; Visual bookmarks
+;; ;; =================================================
+;; (setq bm-restore-repository-on-load t)
+;; (require 'bm)
+;; (global-set-key (kbd "C-c M-t") 'bm-toggle)
+;; (global-set-key (kbd "C-c M-n") 'bm-next)
+;; (global-set-key (kbd "C-c M-p") 'bm-previous)
+;; ;; make bookmarks persistent as default
+;; (setq-default bm-buffer-persistence t)
  
-;; Loading the repository from file when on start up.
-(add-hook' after-init-hook 'bm-repository-load)
+;; ;; Loading the repository from file when on start up.
+;; (add-hook' after-init-hook 'bm-repository-load)
  
-;; Restoring bookmarks when on file find.
-(add-hook 'find-file-hooks 'bm-buffer-restore)
+;; ;; Restoring bookmarks when on file find.
+;; (add-hook 'find-file-hooks 'bm-buffer-restore)
  
-;; Saving bookmark data on killing a buffer
-(add-hook 'kill-buffer-hook 'bm-buffer-save)
+;; ;; Saving bookmark data on killing a buffer
+;; (add-hook 'kill-buffer-hook 'bm-buffer-save)
  
-;; Saving the repository to file when on exit.
-;; kill-buffer-hook is not called when emacs is killed, so we
-;; must save all bookmarks first.
-(add-hook 'kill-emacs-hook '(lambda nil
-                              (bm-buffer-save-all)
-                              (bm-repository-save)))
+;; ;; Saving the repository to file when on exit.
+;; ;; kill-buffer-hook is not called when emacs is killed, so we
+;; ;; must save all bookmarks first.
+;; (add-hook 'kill-emacs-hook '(lambda nil
+;;                               (bm-buffer-save-all)
+;;                               (bm-repository-save)))
 
-;; =====================================================
-;; Octave mode stuff
-;; =====================================================
-(require 'ac-octave)
-    (defun ac-octave-mode-setup ()
-      (setq ac-sources '(ac-source-octave)))
-      (add-hook 'octave-mode-hook
-        '(lambda () (ac-octave-mode-setup)))
+;; ;; =====================================================
+;; ;; Octave mode stuff
+;; ;; =====================================================
+;; (require 'ac-octave)
+;;     (defun ac-octave-mode-setup ()
+;;       (setq ac-sources '(ac-source-octave)))
+;;       (add-hook 'octave-mode-hook
+;;         '(lambda () (ac-octave-mode-setup)))
 
-;; =====================================================
-;; Matlab mode stuff
-;; =====================================================
-;; (add-to-list 'load-path "~/.emacs.d/elpa/matlab-mode-20141227.1244/")
-(add-to-list 'load-path "~/.emacs.d/matlab-mode/")
-(require 'matlab-load)
-;; Enable CEDET feature support for MATLAB code. (Optional)
-(matlab-cedet-setup)
-(setq auto-mode-alist
-    (cons
-     '("\\.m$" . matlab-mode)
-     auto-mode-alist))
-;; auto-complete for matlab-mode
-(add-hook 'matlab-mode-hook
-	  (lambda ()
-	    (auto-complete-mode 1)
-	    (add-to-list 'ac-sources 'ac-source-dictionary)))
-;; auto-complete for matlab-shell-mode
-(add-hook 'matlab-shell-mode-hook
-	  (lambda ()
-	    (auto-complete-mode t)
-	    (add-to-list 'ac-sources 'ac-source-dictionary)))
-(add-to-list 'ac-modes 'matlab-mode)
-(add-to-list 'ac-modes 'matlab-shell-mode)
+;; ;; =====================================================
+;; ;; Matlab mode stuff
+;; ;; =====================================================
+;; ;; (add-to-list 'load-path "~/.emacs.d/elpa/matlab-mode-20141227.1244/")
+;; (add-to-list 'load-path "~/.emacs.d/matlab-mode/")
+;; (require 'matlab-load)
+;; ;; Enable CEDET feature support for MATLAB code. (Optional)
+;; (matlab-cedet-setup)
+;; (setq auto-mode-alist
+;;     (cons
+;;      '("\\.m$" . matlab-mode)
+;;      auto-mode-alist))
+;; ;; auto-complete for matlab-mode
+;; (add-hook 'matlab-mode-hook
+;; 	  (lambda ()
+;; 	    (auto-complete-mode 1)
+;; 	    (add-to-list 'ac-sources 'ac-source-dictionary)))
+;; ;; auto-complete for matlab-shell-mode
+;; (add-hook 'matlab-shell-mode-hook
+;; 	  (lambda ()
+;; 	    (auto-complete-mode t)
+;; 	    (add-to-list 'ac-sources 'ac-source-dictionary)))
+;; (add-to-list 'ac-modes 'matlab-mode)
+;; (add-to-list 'ac-modes 'matlab-shell-mode)
 
-;; =====================================================
-;; Sublimity
-;; =====================================================
-(require 'sublimity)
-;;(sublimity-global-mode)
-;;(require 'sublimity-scroll)
-;; (setq sublimity-scroll-weight 10
-;;       sublimity-scroll-drift-length 5)
-(require 'sublimity-map)
-(sublimity-map-set-delay nil)
+;; ;; =====================================================
+;; ;; Sublimity
+;; ;; =====================================================
+;; (require 'sublimity)
+;; ;;(sublimity-global-mode)
+;; ;;(require 'sublimity-scroll)
+;; ;; (setq sublimity-scroll-weight 10
+;; ;;       sublimity-scroll-drift-length 5)
+;; (require 'sublimity-map)
+;; (sublimity-map-set-delay nil)
 

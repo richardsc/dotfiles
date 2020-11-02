@@ -27,7 +27,7 @@ alias ml='/usr/bin/matlab -nodesktop -nosplash'
 alias r='open -a R.app'
 #alias rt='xterm -bg LightSlateGray -fg snow -T R -e /usr/bin/R &'
 alias rt='rterm -x /usr/bin/R'
-alias td='python ~/bin/t.py --task-dir ~/Dropbox --list todo'
+# alias td='python ~/bin/t.py --task-dir ~/Dropbox --list todo'
 alias t='python ~/bin/t.py --task-dir . --list tasks'
 alias inkscape='/Applications/Inkscape.app/Contents/Resources/bin/inkscape'
 alias readme='displayreadme'
@@ -57,7 +57,7 @@ export PATH=${PATH}:/usr/local/git/bin
 
 # Show git branch and status at bash prompt
 function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "*"
 }
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
@@ -95,7 +95,7 @@ pwd |rev| awk -F / '{print $1,$2}' | rev | sed s_\ _/_
 export PS1='\h:\[\033[1;33m\]$(last_two_dirs)/\[\033[0m\]'
 export PS1="$PS1\$(parse_git_branch)"
 export PS1="$PS1\$(count_tasks)"
-export PS1="\[\033[0;31m\]\$(count_todo)\[\033[0m\]$PS1"
+# export PS1="\[\033[0;31m\]\$(count_todo)\[\033[0m\]$PS1"
 export PS1="\[\033[0;32m\]\$(detect_readme)\[\033[0m\]$PS1"
 export PS1="$PS1$ "
 
