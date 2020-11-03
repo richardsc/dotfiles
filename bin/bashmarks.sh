@@ -34,7 +34,7 @@
 
 # setup file to store bookmarks
 if [ ! -n "$SDIRS" ]; then
-    SDIRS=~/Dropbox/bashmarks
+    SDIRS=~/git/dotfiles/bashmarks
 fi
 touch $SDIRS
 
