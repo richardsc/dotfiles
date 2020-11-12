@@ -71,13 +71,13 @@ function parse_git_branch {
 MKL_NUM_THREADS=1
 export MKL_NUM_THREADS
 
-# Add task count (for tasks in current directory)
-function count_tasks {
-    ~/bin/t.py | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/(/' | sed -e 's/$/t)/' | sed -e 's/(t)//'
-}
-function count_todo {
-    cat ~/Dropbox/todo | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/|/' | sed -e 's/$/td|/' | sed -e 's/|td|//'
-}
+# # Add task count (for tasks in current directory)
+# function count_tasks {
+#     ~/bin/t.py | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/(/' | sed -e 's/$/t)/' | sed -e 's/(t)//'
+# }
+# function count_todo {
+#     cat ~/Dropbox/todo | wc -l | sed -e 's/ *//' 2> /dev/null | sed -e 's/^0$//' | sed -e 's/^/|/' | sed -e 's/$/td|/' | sed -e 's/|td|//'
+# }
 
 # function to detect if a README* file is present in current directory
 function detect_readme {
@@ -94,7 +94,7 @@ pwd |rev| awk -F / '{print $1,$2}' | rev | sed s_\ _/_
 ## export PS1='\h:\[\033[1;33m\]\W\[\033[0m\]'
 export PS1='\h:\[\033[1;33m\]$(last_two_dirs)/\[\033[0m\]'
 export PS1="$PS1\$(parse_git_branch)"
-export PS1="$PS1\$(count_tasks)"
+# export PS1="$PS1\$(count_tasks)"
 # export PS1="\[\033[0;31m\]\$(count_todo)\[\033[0m\]$PS1"
 export PS1="\[\033[0;32m\]\$(detect_readme)\[\033[0m\]$PS1"
 export PS1="$PS1$ "
