@@ -39,15 +39,20 @@ alias octave='/usr/local/octave/3.8.0/bin/octave'
 alias hibernateon="sudo pmset -a hibernatemode 1"
 alias hibernateoff="sudo pmset -a hibernatemode 0"
 
-# Setting PATH for MacPython 2.6
-# The orginal version is saved in .profile.pysave
-# PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
-# export PATH
-
-# Setting PATH for EPD_Py25 v4.2.30201
-# The orginal version is saved in .profile.pysave
-# PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-# export PATH
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/richardsc/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/richardsc/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/richardsc/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/richardsc/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 # Set path for Git after Snow-leopard upgrade
 export PATH=${PATH}:/usr/local/git/bin
