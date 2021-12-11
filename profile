@@ -2,6 +2,7 @@ export PATH=${PATH}:~/bin
 export PATH=${PATH}:/usr/local/share/sage
 export PATH=${PATH}:/Library/Frameworks/PROJ.framework/Programs
 export EDITOR='/usr/bin/vi'
+export PATH=$PATH:/opt/R/arm64/gfortran/bin
 
 alias ls='ls -GF'
 alias ll='ls -lGFh'
@@ -22,11 +23,7 @@ alias acroread='open -a Adobe\ Acrobat\ Reader\ DC.app'
 alias dirs='dirs -v'
 alias ae='aquamacs'
 alias aenw='/Applications/Aquamacs.app/Contents/MacOS/Aquamacs -nw'
-alias mt='mterm -x /usr/bin/matlab -nodesktop -nosplash'
-alias ml='/usr/bin/matlab -nodesktop -nosplash'
 alias r='open -a R.app'
-#alias rt='xterm -bg LightSlateGray -fg snow -T R -e /usr/bin/R &'
-alias rt='rterm -x /usr/bin/R'
 # alias td='python ~/bin/t.py --task-dir ~/Dropbox --list todo'
 alias t='python ~/bin/t.py --task-dir . --list tasks'
 alias inkscape='/Applications/Inkscape.app/Contents/Resources/bin/inkscape'
@@ -34,31 +31,6 @@ alias readme='displayreadme'
 alias netmon='lsof -P -i -n | cut -f 1 -d " " | uniq'
 alias boce='g oce; git pl; cd ..; make oce'
 alias octave='/usr/local/octave/3.8.0/bin/octave'
-
-# Hibernate mode; doesn't seem to work in 10.8
-alias hibernateon="sudo pmset -a hibernatemode 1"
-alias hibernateoff="sudo pmset -a hibernatemode 0"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/richardsc/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/richardsc/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/richardsc/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/richardsc/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# Set path for Git after Snow-leopard upgrade
-export PATH=${PATH}:/usr/local/git/bin
-##
-# Your previous /Users/richardsc/.profile file was backed up as /Users/richardsc/.profile.macports-saved_2010-02-02_at_14:29:55
-##
 
 # Show git branch and status at bash prompt
 function parse_git_dirty {
@@ -68,13 +40,8 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
 }
 
-# Setting PATH for EPD-7.0-1
-# The orginal version is saved in .profile.pysave
-# PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-# export PATH
-
-MKL_NUM_THREADS=1
-export MKL_NUM_THREADS
+# MKL_NUM_THREADS=1
+# export MKL_NUM_THREADS
 
 # # Add task count (for tasks in current directory)
 # function count_tasks {
@@ -107,5 +74,3 @@ export PS1="$PS1$ "
 #Bashmarks
 source ~/bin/bashmarks.sh
 
-# added by Anaconda2 2.5.0 installer
-export PATH="/Users/richardsc/anaconda/bin:$PATH"

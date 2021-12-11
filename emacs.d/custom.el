@@ -4,16 +4,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(LaTeX-command "latex -synctex=1")
- '(TeX-PDF-mode t t)
+ '(TeX-PDF-mode t)
  '(TeX-view-program-list
    '(("Preview" "open -a Preview.app %o")
-     ("Skim" "open -a Skim.app %o")) t)
+     ("Skim" "open -a Skim.app %o")))
  '(TeX-view-program-selection
    '(((output-dvi style-pstricks)
       "dvips and gv")
      (output-dvi "xdvi")
      (output-pdf "Skim")
-     (output-html "xdg-open")) t)
+     (output-html "xdg-open")))
  '(ansi-color-names-vector
    ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(bm-repository-file "/Users/richardsc/Dropbox/emacs/bm-repository")
@@ -40,7 +40,7 @@
  '(matlab-comment-region-s "% ")
  '(matlab-fill-code nil)
  '(package-selected-packages
-   '(exec-path-from-shell pandoc-mode company-reftex company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org zenburn-theme undo-tree sublimity powerline polymode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode highlight-current-line ess bm auctex ac-octave ac-math))
+   '(julia-mode exec-path-from-shell pandoc-mode company-reftex company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org zenburn-theme undo-tree sublimity powerline polymode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode highlight-current-line ess bm auctex ac-octave ac-math))
  '(show-paren-mode t)
  '(text-mode-hook '(text-mode-hook-identify))
  '(tool-bar-mode nil))

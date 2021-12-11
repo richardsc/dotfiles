@@ -175,7 +175,7 @@
 ;; ESS
 ;; =================================================
 (require 'ess-site)
-(require 'ess-rutils)
+;(require 'ess-rutils)
 (setq ess-use-company t)
 ;; (setq ess-use-auto-complete t)
 (ess-set-style 'RStudio)
