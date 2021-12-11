@@ -174,7 +174,9 @@
 ;; =================================================
 ;; ESS
 ;; =================================================
+;; Set default R version, (i.e. the one launched by typing M-x R <RET>)
 (require 'ess-site)
+(setq inferior-R-program-name "/usr/local/bin/R")
 ;(require 'ess-rutils)
 (setq ess-use-company t)
 ;; (setq ess-use-auto-complete t)
