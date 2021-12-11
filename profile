@@ -11,7 +11,6 @@ alias hh='history 20'
 
 # Application aliases
 alias emacs='emacs -q'
-#alias e='open -a /Users/richardsc/applications/Emacs'
 alias e='open -a Emacs'
 alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n'
 alias nb='~/src/nb/nb'
@@ -29,8 +28,6 @@ alias t='python ~/bin/t.py --task-dir . --list tasks'
 alias inkscape='/Applications/Inkscape.app/Contents/Resources/bin/inkscape'
 alias readme='displayreadme'
 alias netmon='lsof -P -i -n | cut -f 1 -d " " | uniq'
-alias boce='g oce; git pl; cd ..; make oce'
-alias octave='/usr/local/octave/3.8.0/bin/octave'
 
 # Show git branch and status at bash prompt
 function parse_git_dirty {
