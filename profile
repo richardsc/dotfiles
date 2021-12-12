@@ -68,7 +68,7 @@ export PS1="$PS1\$(parse_git_branch)"
 export PS1="\[\033[0;32m\]\$(detect_readme)\[\033[0m\]$PS1"
 export PS1="$PS1$ "
 
-export LSCOLORS=gxfxcxdxbxegedabagacad
+export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 #Bashmarks
 source ~/bin/bashmarks.sh
