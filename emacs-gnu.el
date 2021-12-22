@@ -38,6 +38,10 @@
 ;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+;; exec-path-from-shell (to get latex and other things to work)
+(when (daemonp)
+  (exec-path-from-shell-initialize))
+
 ;; Highlight and visual line mode
 (global-hl-line-mode 1)
 (global-visual-line-mode 1)
