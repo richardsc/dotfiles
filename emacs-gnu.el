@@ -4,6 +4,9 @@
 
 (server-start)
 
+;; Use the proper "Mac" way of switching windows
+(global-set-key "\M-`" 'other-frame)
+
 ;; initial window
 (setq initial-frame-alist
       '(
@@ -99,23 +102,34 @@
 ;; ======================================================================
 ;; Flyspell mode
 ;; ======================================================================
-(setq ispell-program-name "/usr/local/bin/aspell")
+;; (setq ispell-program-name "/usr/local/bin/aspell")
+(setq ispell-program-name "/opt/homebrew/bin/aspell")
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 (global-set-key (kbd "C-c j") 'flyspell-check-previous-highlighted-word)
 
 ; set aspell to use the custom dictionary that has had words removed
-(setq ispell-extra-args '("--master=custom"))
+
+;;(setq ispell-extra-args '("--master=custom"))
 
 ;; ======================================================================
 ;; Markdown mode
 ;; ======================================================================
-(setq markdown-enable-math t)
-(add-hook 'markdown-mode-hook 'flyspell-mode)
+;; (setq markdown-enable-math t)
+;; (add-hook 'markdown-mode-hook 'flyspell-mode)
+(use-package markdown-mode
+  :ensure t
+  :mode ("\\.md\\'" . gfm-mode)
+  :commands (markdown-mode gfm-mode)
+  :config
+  (setq markdown-command "pandoc -t html5")
+  (setq markdown-enable-math t)
+  (add-hook 'markdown-mode-hook 'flyspell-mode))
 
 ;; ====================================================
 ;; pandoc-mode
 ;; ====================================================
 (add-hook 'markdown-mode-hook 'pandoc-mode)
+
 
 ;; exec-path-from-shell to fix $PATH problems on OSX (including pandoc)
 ;; (when (memq window-system '(mac ns x))
