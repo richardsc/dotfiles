@@ -7,6 +7,10 @@
 ;; Use the proper "Mac" way of switching windows
 (global-set-key "\M-`" 'other-frame)
 
+;; Mac specific stuff
+(setq mac-command-modifier 'meta)
+(setq x-select-enable-clipboard t)
+
 ;; initial window
 (setq initial-frame-alist
       '(
@@ -59,7 +63,6 @@
 
 ;; Powerline
 ;; https://emacs.stackexchange.com/questions/281/how-do-i-get-a-fancier-looking-mode-line
-(add-to-list 'load-path "~/.emacs.d/elpa/powerline-20150319.533")
 (require 'powerline)
 (set-face-attribute 'mode-line nil
                     :foreground "Black"
@@ -94,10 +97,6 @@
 ;; Org mode
 ;; ======================================================================
 ;;(load-file "~/.emacs.d/org-cgr.el")
-
-;; Mac specific stuff
-(setq mac-command-modifier 'meta)
-(setq x-select-enable-clipboard t)
 
 ;; ======================================================================
 ;; Flyspell mode
@@ -188,6 +187,9 @@
 (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+(setq polymode-display-output-file nil)
+(setq polymode-weaver-output-file-format "%s")
+(setq polymode-exporter-output-file-format "%s")
 
 ;; =================================================
 ;; ESS
