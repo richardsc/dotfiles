@@ -75,3 +75,5 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 #Bashmarks
 source ~/bin/bashmarks.sh
 
+# Z 
+source /opt/homebrew/etc/profile.d/z.sh
