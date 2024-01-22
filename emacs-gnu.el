@@ -203,6 +203,8 @@
 (ess-set-style 'RStudio)
 (define-key ess-r-mode-map "_" #'ess-insert-assign)
 (define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
+;; Startup directory default to file directory (see: https://github.com/emacs-ess/ESS/issues/1187#issuecomment-1038360149)
+(setq ess-startup-directory 'default-directory)
 
 ;; =================================================
 ;; IDO mode
