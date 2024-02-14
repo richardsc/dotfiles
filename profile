@@ -5,6 +5,7 @@ export EDITOR='/usr/bin/vi'
 export PATH=$PATH:/opt/R/arm64/gfortran/bin
 export MPI_HOME=/opt/homebrew/Cellar/open-mpi/4.1.4_2
 # export NETCDF_ROOT=/opt/homebrew/Cellar/netcdf/4.8.1
+export PATH=~.local/bin:$PATH
 
 alias ls='ls -GF'
 alias ll='ls -lGFh'
@@ -77,3 +78,4 @@ source ~/bin/bashmarks.sh
 
 # Z 
 source /opt/homebrew/etc/profile.d/z.sh
+. "$HOME/.cargo/env"
