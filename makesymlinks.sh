@@ -6,9 +6,9 @@
 
 ########## Variables
 
-dir=~/git/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-files="emacs emacs-gnu.el emacs.d/custom.el emacs.d/org-cgr.el profile Rprofile gitconfig latexmkrc  notarc bm-repository octaverc nbrc"    # list of files/folders to symlink in homedir
+dir=~/git/dotfiles                                                                                                                               # dotfiles directory
+olddir=~/dotfiles_old                                                                                                                            # old dotfiles backup directory
+files="emacs emacs-gnu.el emacs.d/custom.el emacs.d/org-cgr.el profile Rprofile gitconfig latexmkrc  notarc bm-repository octaverc nbrc condarc" # list of files/folders to symlink in homedir
 
 ##########
 
@@ -22,7 +22,7 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
+# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv ~/.$file ~/dotfiles_old/
@@ -33,14 +33,14 @@ done
 # lets add a few specific symlinks for non-dotfiles in ~/bin
 bindir=~/git/dotfiles/bin
 binolddir=~/bin/bin_old
-binfiles="bashmarks.sh displayreadme ipadsync markdown mterm rterm tree v t.py matlabcmd octave histmatch"
+binfiles="bashmarks.sh displayreadme ipadsync markdown tree v t.py matlabcmd octave histmatch"
 
 # create bin_old in ~/bin
 echo "Creating $binolddir for backup of any existing bin files in ~/bin"
 mkdir -p $binolddir
 echo "...done"
 
-# move any existing bin files in bin to bin_old directory, then create symlinks 
+# move any existing bin files in bin to bin_old directory, then create symlinks
 for file in $binfiles; do
     echo "Moving any existing binfiles from ~/bin to $binolddir"
     mv ~/bin/$file ~/bin/bin_old/
