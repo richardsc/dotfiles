@@ -77,8 +77,12 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 source ~/bin/bashmarks.sh
 
 # Z
-source /opt/homebrew/etc/profile.d/z.sh
-. "$HOME/.cargo/env"
+if [ $(uname -m) == 'arm64' ]; then
+    source /opt/homebrew/etc/profile.d/z.sh
+    . "$HOME/.cargo/env"
+else
+    source /usr/local/etc/profile.d/z.sh
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
