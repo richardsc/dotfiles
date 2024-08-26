@@ -2,7 +2,9 @@ export PATH=${PATH}:~/bin
 export PATH=${PATH}:/usr/local/share/sage
 export PATH=${PATH}:/Library/Frameworks/PROJ.framework/Programs
 export EDITOR='/usr/bin/vi'
-export PATH=$PATH:/opt/R/arm64/gfortran/bin
+if [ $(uname -m) == 'arm64' ]; then
+    export PATH=$PATH:/opt/R/arm64/gfortran/bin
+fi
 export MPI_HOME=/opt/homebrew/Cellar/open-mpi/4.1.4_2
 # export NETCDF_ROOT=/opt/homebrew/Cellar/netcdf/4.8.1
 export PATH=~/.local/bin:$PATH
