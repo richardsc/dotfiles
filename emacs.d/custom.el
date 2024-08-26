@@ -40,8 +40,7 @@
  '(matlab-comment-region-s "% ")
  '(matlab-fill-code nil)
  '(package-selected-packages
-   '(catppuccin-theme powerline impatient-mode simple-httpd use-package ess julia-mode exec-path-from-shell pandoc-mode company-reftex company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org zenburn-theme undo-tree sublimity polymode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode highlight-current-line bm auctex ac-octave ac-math))
- '(show-paren-mode t)
+   '(ligature catppuccin-theme powerline impatient-mode simple-httpd use-package ess julia-mode exec-path-from-shell pandoc-mode company-reftex company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org zenburn-theme undo-tree sublimity polymode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode highlight-current-line bm auctex ac-octave ac-math))
  '(text-mode-hook '(text-mode-hook-identify))
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -49,5 +48,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray20" :foreground "white smoke" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "apple" :family "Monaco"))))
+ '(default ((t (:inherit nil :stipple nil :background "gray20" :foreground "white smoke" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 120 :width normal :foundry "nil" :family "JetBrainsMono Nerd Font Mono"))))
  '(hl-line ((t (:inherit highlight :background "grey28")))))
