@@ -2,7 +2,7 @@ channels:
   - conda-forge
   - defaults
 channel_priority: strict
-auto_activate_base: false 
+auto_activate_base: true
 create_default_packages:
   - ipython
   - pip
