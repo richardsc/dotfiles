@@ -46,8 +46,8 @@
 (package-initialize)
 
 ;; exec-path-from-shell (to get latex and other things to work)
-;;(when (daemonp)
-;;  (exec-path-from-shell-initialize))
+(when (daemonp)
+  (exec-path-from-shell-initialize))
 
 ;; Catppuccin theme
 (load-theme 'catppuccin :no-confirm)
