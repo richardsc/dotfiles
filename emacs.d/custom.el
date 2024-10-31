@@ -40,7 +40,7 @@
  '(matlab-comment-region-s "% ")
  '(matlab-fill-code nil)
  '(package-selected-packages
-   '(ligature catppuccin-theme powerline impatient-mode simple-httpd use-package ess julia-mode exec-path-from-shell pandoc-mode company-reftex company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org zenburn-theme undo-tree sublimity polymode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode highlight-current-line bm auctex ac-octave ac-math))
+   '(linum-relative ligature catppuccin-theme powerline impatient-mode simple-httpd use-package ess julia-mode exec-path-from-shell pandoc-mode company-reftex company-bibtex company-auctex company poly-R poly-markdown poly-noweb poly-org zenburn-theme undo-tree sublimity polymode matlab-mode markdown-mode lorem-ipsum ido-vertical-mode highlight-current-line bm auctex ac-octave ac-math))
  '(text-mode-hook '(text-mode-hook-identify))
  '(tool-bar-mode nil))
 (custom-set-faces

@@ -64,7 +64,8 @@
 (setq hl-line-range-function 'visual-line-line-range)
 
 ;; linum-mode
-;; (global-linum-mode 1)
+(global-display-line-numbers-mode 1)
+(setq display-line-numbers-type 'relative)
 
 ;; Powerline
 ;; https://emacs.stackexchange.com/questions/281/how-do-i-get-a-fancier-looking-mode-line
