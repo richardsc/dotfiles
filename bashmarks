@@ -122,3 +122,4 @@ export DIR_gdrive="$HOME/Library/CloudStorage/GoogleDrive-clark.richards@gmail.c
 export DIR_res="$HOME/research"
 export DIR_nserc="$HOME/Library/CloudStorage/GoogleDrive-clark.richards@gmail.com/My Drive/NSERC_EG/2022-2023"
 export DIR_nv="$HOME/.config/nvim"
+export DIR_nvim="$HOME/.config/nvim"
