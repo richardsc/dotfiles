@@ -30,6 +30,9 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+# For OSX nvim stuff I need a .bashrc that links to .profile
+ln -s ~/.profile ~/.bashrc
+
 # lets add a few specific symlinks for non-dotfiles in ~/bin
 bindir=~/git/dotfiles/bin
 binolddir=~/bin/bin_old
