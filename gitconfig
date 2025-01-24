@@ -13,6 +13,7 @@
     br = branch
     co = checkout
     df = diff
+    wdf = diff --word-diff
     lg = log -p
     ft = fetch
     mg = merge
