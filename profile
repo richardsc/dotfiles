@@ -101,3 +101,18 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/Users/richardsc/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/Users/richardsc/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
