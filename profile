@@ -16,6 +16,7 @@ alias hh='history 20'
 
 # Application aliases
 alias tig='tig --word-diff'
+alias lg='lazygit'
 alias emacs='emacs -q'
 alias e='open -a Emacs'
 alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n'
