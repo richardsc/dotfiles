@@ -7,3 +7,4 @@ options(radian.escape_key_map = list(
 options(radian.editing_mode = "emacs")
 
 options(radian.insert_new_line = FALSE)
+options(radian.complete_while_typing = TRUE)
