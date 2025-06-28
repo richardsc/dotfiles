@@ -17,8 +17,13 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
+if [ $(uname -m) == 'arm64' ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    . "$HOME/.cargo/env"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+    . "$HOME/.cargo/env"
+fi
 
 # >>> juliaup initialize >>>
 
