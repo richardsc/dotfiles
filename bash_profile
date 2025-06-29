@@ -22,7 +22,6 @@ if [ $(uname -m) == 'arm64' ]; then
     . "$HOME/.cargo/env"
 else
     eval "$(/usr/local/bin/brew shellenv)"
-    . "$HOME/.cargo/env"
 fi
 
 # >>> juliaup initialize >>>
