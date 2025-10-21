@@ -15,6 +15,7 @@ alias less='less -eX'
 alias hh='history 20'
 
 # Application aliases
+alias nvs='NVIM_APPNAME=nvimscratch nvim'
 alias nv='NVIM_APPNAME=nvimtest nvim'
 alias r='radian'
 alias tig='tig --word-diff'
