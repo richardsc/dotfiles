@@ -36,5 +36,7 @@ case ":$PATH:" in
         export PATH=/Users/richardsc/.juliaup/bin${PATH:+:${PATH}}
         ;;
 esac
+# Tab completion for juliaup and julia channel selection
+[ -f "/Users/richardsc/.julia/juliaup/completions/bash.sh" ] && source "/Users/richardsc/.julia/juliaup/completions/bash.sh"
 
 # <<< juliaup initialize <<<
